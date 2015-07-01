@@ -19,7 +19,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-App::uses('Controller', 'Controller');
+App::uses('AppController', 'Controller');
 
 /**
  * Application Controller
@@ -31,5 +31,8 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-    public $components = array('DebugKit.Toolbar');
+    public $components = array(
+	'DebugKit.Toolbar',
+	'RequestHandler'
+    );
 }
